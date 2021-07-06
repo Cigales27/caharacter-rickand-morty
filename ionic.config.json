@@ -1,0 +1,8 @@
+{
+  "name": "CaharacterRickandMorty",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "2898dd57"
+}

@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "CaharacterRickandMorty",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
