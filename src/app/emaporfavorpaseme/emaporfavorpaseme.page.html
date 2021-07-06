@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>{{persona.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>{{persona.species}}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    Genero:{{persona.gender}} <br>
+    Origen: {{persona.origin.name}}<br>
+    Estatus: {{persona.status}}
+  </ion-card-content>
+  <img src="{{persona.image}}" alt="">
+</ion-card>
+</ion-content>

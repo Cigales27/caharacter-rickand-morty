@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import {PeticionService} from '../Services/peticion.service';
 
 @Component({
   selector: 'app-folder',
@@ -7,12 +8,15 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./folder.page.scss'],
 })
 export class FolderPage implements OnInit {
-  public folder: string;
+  personajes: any[];
 
-  constructor(private activatedRoute: ActivatedRoute) { }
+  constructor( private peticionService: PeticionService) { }
 
   ngOnInit() {
-    this.folder = this.activatedRoute.snapshot.paramMap.get('id');
+    this.peticionService.personajes().subscribe((respuesta: any)=>{
+      this.personajes = respuesta.results;
+      console.log(this.personajes);
+    });
   }
 
 }
